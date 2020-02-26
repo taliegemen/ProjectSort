@@ -1,0 +1,4 @@
+To use custom array mode, you have to place customArray.xlsx to the same folder as your installation folder.
+Also, please note that, MATLAB runtime ver 9.5 must be installed to run this application properly.
+Thanks For Using
+-Ali Egemen
