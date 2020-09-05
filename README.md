@@ -1,4 +1,12 @@
-# ProjectSort
-A sorting algorithms visualization project with MATLAB and Python
-![image](https://user-images.githubusercontent.com/40140076/57811089-155e7600-7772-11e9-805e-dcc3ee4787b5.png)
-![image](https://user-images.githubusercontent.com/40140076/57811303-8f8efa80-7772-11e9-90a0-feb4218e642c.png)
+# Fashion Classification
+MATLAB Fashion Classification with Different Networks.
+## To use:
+1. Select a model from models folder.
+2. Run the selected model.
+3. Run main.m.
+## If you want to use the models with your own data:
+1. Change the fullyconnectedlayer sizes in your selected model with your class amount.
+2. Run the model.
+3. Change the data path in main.m, then run main.m
+## Fashion Classifier with ShuffleNet can be found from Releases.
+![image](https://raw.githubusercontent.com/taliegemen/Fashion-Classification/master/GUIPicture.png)
