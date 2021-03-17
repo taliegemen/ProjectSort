@@ -83,7 +83,8 @@ def SiftDown(Array, startValue, end):
     rootValue = startValue
     while True:
         childValue = rootValue * 2 + 1
-        if childValue > end: break
+        if childValue > end:
+            break
         if childValue + 1 <= end and Array[childValue] < Array[childValue + 1]:
             childValue += 1
         if Array[rootValue] < Array[childValue]:
