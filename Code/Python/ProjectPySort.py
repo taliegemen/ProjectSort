@@ -6,7 +6,7 @@ import time
 
 def InsertionSort(Array):
     Delay = 0.001 * (200 - values['sliderSpeed'])
-    for j in range(1, len(Array)):
+    for j in enumerate(Array, start=1):
         keyvalue = Array[j]
         i = j - 1
         while i > -1 and Array[i] > keyvalue:
@@ -31,7 +31,7 @@ def MergeSort(Array):
     secondhalf = np.append(secondhalf, 99999)
     i = 0
     j = 0
-    for operationcounter in range(0, len(Array)):
+    for operationcounter in enumerate(Array):
         if firsthalf[i] <= secondhalf[j]:
             Array[operationcounter] = firsthalf[i]
             i = i + 1
@@ -45,7 +45,7 @@ def MergeSort(Array):
 
 def BubbleSort(Array):
     Delay = 0.001 * (200 - values['sliderSpeed'])
-    for i in range(1, len(Array)):
+    for i in enumerate(Array, start=1):
         for j in range(len(Array) - 1, i - 1, -1):
             time.sleep(Delay)
             if Array[j] < Array[j - 1]:
@@ -153,7 +153,7 @@ while True:
         arrayLen = values['sliderLength']
         arrayMax = values['sliderMax']
         Array = np.random.randint(1, arrayMax, arrayLen)
-        for j in range(1, len(Array)):
+        for j in enumerate(Array, start=1):
             keyvalue = Array[j]
             i = j - 1
             while i > -1 and Array[i] > keyvalue:
