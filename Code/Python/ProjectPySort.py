@@ -105,6 +105,7 @@ def HeapSort(Array):
         SiftDown(Array, 0, end - 1)
     return Array
 
+
 BAR_WIDTH = 50
 BAR_SPACING = 75
 EDGE_OFFSET = 3
@@ -202,8 +203,7 @@ while True:
         graph.Erase()
         for k in enumerate(Array):
             graph_value = Array[k]
-            graph.DrawRectangle(top_left=(k * BAR_SPACING + EDGE_OFFSET, graph_value), 
-                bottom_right=(k * BAR_SPACING + EDGE_OFFSET 
+            graph.DrawRectangle(top_left=(k * BAR_SPACING + EDGE_OFFSET, graph_value),                bottom_right=(k * BAR_SPACING + EDGE_OFFSET 
                 + BAR_WIDTH, 0), fill_color='light blue')
             graph.DrawText(text=graph_value, location=(k * BAR_SPACING 
                 + EDGE_OFFSET + 25, graph_value + 10))
@@ -216,9 +216,9 @@ while True:
         for k in enumerate(Array):
             graph_value = Array[k]
             graph.DrawRectangle(top_left=(k * BAR_SPACING + EDGE_OFFSET, graph_value),
-            bottom_right=(k * BAR_SPACING + EDGE_OFFSET 
+            bottom_right=(k * BAR_SPACING + EDGE_OFFSET
             + BAR_WIDTH, 0), fill_color='light blue')
-            graph.DrawText(text=graph_value, location=(k * BAR_SPACING 
+            graph.DrawText(text=graph_value, location=(k * BAR_SPACING
             + EDGE_OFFSET + 25, graph_value + 10))
 
 
