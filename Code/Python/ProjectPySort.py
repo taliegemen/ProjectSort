@@ -117,10 +117,10 @@ graph = sg.Graph(GRAPH_SIZE, (0, 0), DATA_SIZE)
 sg.ChangeLookAndFeel('GreenTan')          # ------ Menu Definition ------ #
 menu_def = [['File', ['Open', 'Save', 'Exit', 'Properties']],
                 ['Edit', ['Paste', ['Special', 'Normal', ], 'Undo'], ],
-                ['Help', 'About...'], ]      
+                ['Help', 'About...'], ]
 
 layout = [
-        [sg.Menu(menu_def, tearoff=True)],      
+        [sg.Menu(menu_def, tearoff=True)],
         [sg.Text('Project Sort!', size=(40, 1), justification='center', font=("Helvetica", 25), relief=sg.RELIEF_RIDGE)],
         [sg.Text('Ali Egemen Taşören 160403034')],
         [sg.Frame(layout=[
@@ -137,7 +137,7 @@ layout = [
              sg.Text('Array Length', font=("Helvetica", 12), size=(10, 1)),
              sg.Text('Speed', font=("Helvetica", 12), size=(9, 1))],
         [sg.Text('_'  * 110)],
-    ]      
+    ]
 
 
 window = sg.Window('Project Sort', default_element_size=(40, 1), grab_anywhere=False).Layout(layout)
@@ -164,10 +164,10 @@ while True:
         graph.Erase()
         for k in enumerate(Array):
             graph_value = Array[k]
-            graph.DrawRectangle(top_left=(k * BAR_SPACING 
+            graph.DrawRectangle(top_left=(k * BAR_SPACING
                 + EDGE_OFFSET, graph_value),
                                 bottom_right=(k * BAR_SPACING + EDGE_OFFSET + BAR_WIDTH, 0), fill_color='light blue')
-            graph.DrawText(text=graph_value, location=(k * BAR_SPACING 
+            graph.DrawText(text=graph_value, location=(k * BAR_SPACING
                 + EDGE_OFFSET + 25, graph_value + 10))
     if event == 'Merge':
         arrayLen = values['sliderLength']
@@ -178,9 +178,9 @@ while True:
         for k in enumerate(Array):
             graph_value = Array[k]
             graph.DrawRectangle(top_left=(k * BAR_SPACING + EDGE_OFFSET, graph_value),
-                                bottom_right=(k * BAR_SPACING + EDGE_OFFSET 
+                                bottom_right=(k * BAR_SPACING + EDGE_OFFSET
                                     + BAR_WIDTH, 0), fill_color='light blue')
-            graph.DrawText(text=graph_value, location=(k * BAR_SPACING 
+            graph.DrawText(text=graph_value, location=(k * BAR_SPACING
                 + EDGE_OFFSET + 25, graph_value + 10))
     if event == 'Quick':
         arrayLen = values['sliderLength']
@@ -191,9 +191,9 @@ while True:
         for k in enumerate(Array):
             graph_value = Array[k]
             graph.DrawRectangle(top_left=(k * BAR_SPACING + EDGE_OFFSET, graph_value),
-                                bottom_right=(k * BAR_SPACING 
+                                bottom_right=(k * BAR_SPACING
                                     + EDGE_OFFSET + BAR_WIDTH, 0), fill_color='light blue')
-            graph.DrawText(text=graph_value, location=(k * BAR_SPACING 
+            graph.DrawText(text=graph_value, location=(k * BAR_SPACING
                 + EDGE_OFFSET + 25, graph_value + 10))
     if event == 'Heap':
         arrayLen = values['sliderLength']
@@ -203,9 +203,9 @@ while True:
         graph.Erase()
         for k in enumerate(Array):
             graph_value = Array[k]
-            graph.DrawRectangle(top_left=(k * BAR_SPACING + EDGE_OFFSET, graph_value),                bottom_right=(k * BAR_SPACING + EDGE_OFFSET 
+            graph.DrawRectangle(top_left=(k * BAR_SPACING + EDGE_OFFSET, graph_value),                bottom_right=(k * BAR_SPACING + EDGE_OFFSET
                 + BAR_WIDTH, 0), fill_color='light blue')
-            graph.DrawText(text=graph_value, location=(k * BAR_SPACING 
+            graph.DrawText(text=graph_value, location=(k * BAR_SPACING
                 + EDGE_OFFSET + 25, graph_value + 10))
     if event == 'Bubble':
         arrayLen = values['sliderLength']
