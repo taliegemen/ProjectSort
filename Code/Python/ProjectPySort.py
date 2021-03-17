@@ -202,8 +202,8 @@ while True:
         for k in enumerate(Array):
             graph_value = Array[k]
             graph.DrawRectangle(top_left=(k * BAR_SPACING + EDGE_OFFSET, graph_value),
-                                bottom_right=(k * BAR_SPACING + EDGE_OFFSET 
-                                    + BAR_WIDTH, 0), fill_color='light blue')
+            bottom_right=(k * BAR_SPACING + EDGE_OFFSET 
+            + BAR_WIDTH, 0), fill_color='light blue')
             graph.DrawText(text=graph_value, location=(k * BAR_SPACING 
                 + EDGE_OFFSET + 25, graph_value + 10))
     if event == 'Bubble':
@@ -215,10 +215,10 @@ while True:
         for k in enumerate(Array):
             graph_value = Array[k]
             graph.DrawRectangle(top_left=(k * BAR_SPACING + EDGE_OFFSET, graph_value),
-                                bottom_right=(k * BAR_SPACING + EDGE_OFFSET 
-                                + BAR_WIDTH, 0), fill_color='light blue')
+            bottom_right=(k * BAR_SPACING + EDGE_OFFSET 
+            + BAR_WIDTH, 0), fill_color='light blue')
             graph.DrawText(text=graph_value, location=(k * BAR_SPACING 
-                + EDGE_OFFSET + 25, graph_value + 10))
+            + EDGE_OFFSET + 25, graph_value + 10))
 
 
 
