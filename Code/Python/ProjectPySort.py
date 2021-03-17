@@ -216,7 +216,7 @@ while True:
             graph_value = Array[k]
             graph.DrawRectangle(top_left=(k * BAR_SPACING + EDGE_OFFSET, graph_value),
                                 bottom_right=(k * BAR_SPACING + EDGE_OFFSET 
-                                    + BAR_WIDTH, 0), fill_color='light blue')
+                                + BAR_WIDTH, 0), fill_color='light blue')
             graph.DrawText(text=graph_value, location=(k * BAR_SPACING 
                 + EDGE_OFFSET + 25, graph_value + 10))
 
@@ -224,5 +224,5 @@ while True:
 
 
 sg.Popup('Sayanora',
-             'App will close now...',
-             'Thanks for using. -Ali Egemen')
+        'App will close now...',
+        'Thanks for using. -Ali Egemen')
