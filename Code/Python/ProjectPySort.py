@@ -62,18 +62,18 @@ def QuickSort(Array):
     rightArray = []
     if len(Array) <= 1:  # Already Sorted if Length is 1
         return Array
-    else:
-        pivot = np.random.choice(Array, 1)
-        for i in Array:
-            if i < pivot:
-                leftArray.append(i)
-                time.sleep(Delay)
-            elif i > pivot:
-                rightArray.append(i)
-                time.sleep(Delay)
-            else:
-                pivotList.append(i)
-                time.sleep(Delay)
+
+    pivot = np.random.choice(Array, 1)
+    for i in Array:
+        if i < pivot:
+            leftArray.append(i)
+            time.sleep(Delay)
+        elif i > pivot:
+            rightArray.append(i)
+            time.sleep(Delay)
+        else:
+            pivotList.append(i)
+            time.sleep(Delay)
         leftArray = QuickSort(leftArray)
         rightArray = QuickSort(rightArray)
         return leftArray + pivotList + rightArray
@@ -160,55 +160,65 @@ while True:
 
             Array[i + 1] = keyvalue
         graph.Erase()
-        for k in range(len(Array)):
+        for k in enumerate(Array):
             graph_value = Array[k]
-            graph.DrawRectangle(top_left=(k * BAR_SPACING + EDGE_OFFSET, graph_value),
+            graph.DrawRectangle(top_left=(k * BAR_SPACING 
+                + EDGE_OFFSET, graph_value),
                                 bottom_right=(k * BAR_SPACING + EDGE_OFFSET + BAR_WIDTH, 0), fill_color='light blue')
-            graph.DrawText(text=graph_value, location=(k * BAR_SPACING + EDGE_OFFSET + 25, graph_value + 10))
+            graph.DrawText(text=graph_value, location=(k * BAR_SPACING 
+                + EDGE_OFFSET + 25, graph_value + 10))
     if event == 'Merge':
         arrayLen = values['sliderLength']
         arrayMax = values['sliderMax']
         Array = np.random.randint(1, arrayMax, arrayLen)
         Array = MergeSort(Array)
         graph.Erase()
-        for k in range(len(Array)):
+        for k in enumerate(Array):
             graph_value = Array[k]
             graph.DrawRectangle(top_left=(k * BAR_SPACING + EDGE_OFFSET, graph_value),
-                                bottom_right=(k * BAR_SPACING + EDGE_OFFSET + BAR_WIDTH, 0), fill_color='light blue')
-            graph.DrawText(text=graph_value, location=(k * BAR_SPACING + EDGE_OFFSET + 25, graph_value + 10))
+                                bottom_right=(k * BAR_SPACING + EDGE_OFFSET 
+                                    + BAR_WIDTH, 0), fill_color='light blue')
+            graph.DrawText(text=graph_value, location=(k * BAR_SPACING 
+                + EDGE_OFFSET + 25, graph_value + 10))
     if event == 'Quick':
         arrayLen = values['sliderLength']
         arrayMax = values['sliderMax']
         Array = np.random.randint(1, arrayMax, arrayLen)
         Array = QuickSort(Array)
         graph.Erase()
-        for k in range(len(Array)):
+        for k in enumerate(Array):
             graph_value = Array[k]
             graph.DrawRectangle(top_left=(k * BAR_SPACING + EDGE_OFFSET, graph_value),
-                                bottom_right=(k * BAR_SPACING + EDGE_OFFSET + BAR_WIDTH, 0), fill_color='light blue')
-            graph.DrawText(text=graph_value, location=(k * BAR_SPACING + EDGE_OFFSET + 25, graph_value + 10))
+                                bottom_right=(k * BAR_SPACING 
+                                    + EDGE_OFFSET + BAR_WIDTH, 0), fill_color='light blue')
+            graph.DrawText(text=graph_value, location=(k * BAR_SPACING 
+                + EDGE_OFFSET + 25, graph_value + 10))
     if event == 'Heap':
         arrayLen = values['sliderLength']
         arrayMax = values['sliderMax']
         Array = np.random.randint(1, arrayMax, arrayLen)
         Array = HeapSort(Array)
         graph.Erase()
-        for k in range(len(Array)):
+        for k in enumerate(Array):
             graph_value = Array[k]
             graph.DrawRectangle(top_left=(k * BAR_SPACING + EDGE_OFFSET, graph_value),
-                                bottom_right=(k * BAR_SPACING + EDGE_OFFSET + BAR_WIDTH, 0), fill_color='light blue')
-            graph.DrawText(text=graph_value, location=(k * BAR_SPACING + EDGE_OFFSET + 25, graph_value + 10))
+                                bottom_right=(k * BAR_SPACING + EDGE_OFFSET 
+                                    + BAR_WIDTH, 0), fill_color='light blue')
+            graph.DrawText(text=graph_value, location=(k * BAR_SPACING 
+                + EDGE_OFFSET + 25, graph_value + 10))
     if event == 'Bubble':
         arrayLen = values['sliderLength']
         arrayMax = values['sliderMax']
         Array = np.random.randint(1, arrayMax, arrayLen)
         Array = BubbleSort(Array)
         graph.Erase()
-        for k in range(len(Array)):
+        for k in enumerate(Array):
             graph_value = Array[k]
             graph.DrawRectangle(top_left=(k * BAR_SPACING + EDGE_OFFSET, graph_value),
-                                bottom_right=(k * BAR_SPACING + EDGE_OFFSET + BAR_WIDTH, 0), fill_color='light blue')
-            graph.DrawText(text=graph_value, location=(k * BAR_SPACING + EDGE_OFFSET + 25, graph_value + 10))
+                                bottom_right=(k * BAR_SPACING + EDGE_OFFSET 
+                                    + BAR_WIDTH, 0), fill_color='light blue')
+            graph.DrawText(text=graph_value, location=(k * BAR_SPACING 
+                + EDGE_OFFSET + 25, graph_value + 10))
 
 
 
