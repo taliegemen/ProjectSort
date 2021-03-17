@@ -208,8 +208,4 @@ while True:
             graph.DrawText(text=graph_value, location=(k * BAR_SPACING + EDGE_OFFSET + 25, graph_value + 10))
 
 
-
-
-sg.Popup('Sayanora',
-                    'App will close now...',
-                                            'Thanks for using. -Ali Egemen')
+sg.Popup('Sayanora -Ali Egemen Taşören')
